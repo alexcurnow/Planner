@@ -4,7 +4,7 @@ namespace Planner
 {
     public class Building
     {
-        private string _designer;
+        private string _designer = "Alexander R. Curnow";
         private DateTime _dateConstructed;
         private string _address;
         private string _owner;
@@ -33,5 +33,21 @@ namespace Planner
         {
             _owner = purchaser;
         }
+
+        public string GetAddress()
+        {
+            return _address;
+        }
+
+        public string GetDateConstructed()
+        {
+            return $"Constructed on {_dateConstructed}";
+        }
+
+        public string GetDesigner() => $"Designed by {_designer}";
+
+        public string GetOwner() => $"Owned by {_owner}";
+
+        public string GetVolume() => $"{Volume} cubic meters of space";
     }
 }
